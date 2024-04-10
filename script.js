@@ -31,7 +31,7 @@ async function checkWeather(event)
     const data = await response.json();
      //updating the html values
     cityName.innerHTML = data.name;
-    weatherTemp.innerHTML = (((Math.round(data.main.temp))*(9/5))+32) + "°F";
+    weatherTemp.innerHTML = Math.round((data.main.temp)*(9/5)+(32))+ "°F";
     weatherDesc.innerHTML = data.weather[0].description;
 
     //conditional statement to change the displayed image
