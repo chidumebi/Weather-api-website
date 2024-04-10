@@ -1,0 +1,239 @@
+*
+{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:'Montserrat', sans-serif;
+    
+}
+
+body
+{
+  background-image: url("main\ Bgpic.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100em 100%;
+  transition: background-image 3s; 
+  color: white;
+}
+
+.weatherCard
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 100px;
+  background-color: rgba(0,0,0,0.5);
+  border-radius:12px;
+  margin:auto;
+  margin-top: 40px;
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+/* Styling the input and button*/
+.weatherForm
+{
+  position:absolute;
+  top:7%;
+}
+
+#cityInput
+{
+    height:50px;
+    width:300px;
+    border-radius:6px;
+    border:2px solid white;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    padding: 10px;
+    font-size: medium;
+}
+
+#cityBtn
+{
+    height:50px;
+    width:60px;
+    float:right;
+    margin-left:5px;
+    border-radius:6px;
+    border:2px solid white;
+    background-color: rgba(0,0,0,0.6);
+    color:white;
+    font-size: medium;
+}
+
+.city
+{
+    position: absolute;
+    top:20%;
+    font-size: 38px;
+    left:35%;
+    font-weight: lighter;
+}
+
+img
+{
+    position: absolute;
+    top:25%;
+    left:25%
+}
+
+.temp
+{
+    position: absolute;
+    top:60%;
+    font-size:100px;
+    left:22%;
+    font-weight:lighter;
+}
+
+.desc
+{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 25px;
+    font-size: 40px;
+    font-weight: lighter;
+    font-style: italic;
+    text-align: center;
+}
+
+#cityBtn:hover
+{
+    border:none;
+    background-color: rgba(0,0,0,0.9);
+    color:white;
+    font-size: large;
+}
+
+#cityBtn:active
+{
+    border:none;
+    background-color: white;
+    color:black;
+    font-size: small;
+}
+
+#cityInput:focus {
+    border: none;
+    background-color: inherit;
+}
+
+/* change info to none*/
+.weatherInfo
+{
+    display:none;
+}
+
+.fadeIn
+{
+ animation-name: growth;
+
+ animation-duration: 2s;
+}
+
+@keyframes growth {
+    from{
+        height:100px;
+    }
+
+    to {
+        height:620px;
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+
+.weatherCard
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 70px;
+  background-color: rgba(0,0,0,0.5);
+  border-radius:12px;
+  margin:auto;
+  margin-top: 40px;
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+#cityInput
+{
+    height:30px;
+    width:200px;
+    border-radius:6px;
+    border:2px solid white;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    padding: 10px;
+    font-size: medium;
+}
+
+#cityBtn
+{
+    height:30px;
+    width:60px;
+    float:right;
+    margin-left:5px;
+    border-radius:6px;
+    border:2px solid white;
+    background-color: rgba(0,0,0,0.6);
+    color:white;
+    font-size: medium;
+}
+
+.city
+{
+    position: absolute;
+    top:20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+img
+{
+    position: absolute;
+    top:25%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 200px;
+    width: 200px;
+}
+
+.temp
+{
+    position: absolute;
+    top:55%;
+    font-size:50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight:lighter;
+}
+
+.desc
+{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 6px;
+    font-size: 30px;
+    font-weight: lighter;
+    font-style: italic;
+    text-align: center;
+}
+   
+}
